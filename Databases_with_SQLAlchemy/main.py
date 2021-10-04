@@ -1,9 +1,14 @@
 from sqlalchemy.orm import declarative_base
-from sqlalchemy import Column, String, DateTime, Integer
+from sqlalchemy import Column, String, DateTime, Integer, create_engine
 from datetime import datetime
+import os
 
+BASE_DIR=os.path.dirname(os.path.real(__file__))
+connection_string = 'mysql:///'
 
 Base = declarative_base()
+
+engine = create_engine(User)
 
 """
 Class = User
@@ -21,6 +26,8 @@ class User(Base):
 
   def __repr__(self):
     return f"<User username{self.username} email={self.email}>"
+
+
 
 
 
