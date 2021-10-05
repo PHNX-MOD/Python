@@ -1,21 +1,15 @@
-from sqlalchemy.orm import declarative_base
 from sqlalchemy import Column, String, DateTime, Integer, create_engine
 from datetime import datetime
+from sqlalchemy.orm import declarative_base
 import os
 
-BASE_DIR=os.path.dirname(os.path.real(__file__))
-connection_string = 'mysql:///'
+BASE_DIR=os.path.dirname(os.path.realpath(__file__))
+connection_string = 'sqlite:///'+os.path.join(BASE_DIR,'site.db')
 
 Base = declarative_base()
 
-engine = create_engine(User)
+engine = create_engine(connection_string ,echo=True)
 
-"""
-Class = User
-id int
-username str
-email str
-date_created datetime"""
 
 class User(Base):
   __tablename__ = 'users'
@@ -27,10 +21,3 @@ class User(Base):
   def __repr__(self):
     return f"<User username{self.username} email={self.email}>"
 
-
-
-
-
-
-new_user=User(id=1,username="modith", email="modithross")
-print(new_user)
