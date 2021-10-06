@@ -21,3 +21,4 @@ class User(Base):
   def __repr__(self):
     return f"<User username{self.username} email={self.email}>"
 
+new_uer = User(id=1, username="test1", email="test1@gmail.com")
