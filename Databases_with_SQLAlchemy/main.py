@@ -8,8 +8,7 @@ connection_string = 'sqlite:///'+os.path.join(BASE_DIR,'site.db')
 
 Base = declarative_base()
 
-engine = create_engine(connection_string ,echo=True)
-
+engine = create_engine(connection_string, echo=True)
 
 class User(Base):
   __tablename__ = 'users'
@@ -21,4 +20,4 @@ class User(Base):
   def __repr__(self):
     return f"<User username{self.username} email={self.email}>"
 
-new_uer = User(id=1, username="test1", email="test1@gmail.com")
+new_user = User(id=1, username="test1", email="test1@gmail.com")
