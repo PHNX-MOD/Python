@@ -1,5 +1,6 @@
 import csv
 import json
+
 def csv_to_json(csvFilePath):
     jsonArray = []
 
@@ -15,4 +16,3 @@ def csv_to_json(csvFilePath):
 
 csv_to_json(r'TestData.csv')
 
-#https://www.geeksforgeeks.org/convert-csv-to-json-using-python/

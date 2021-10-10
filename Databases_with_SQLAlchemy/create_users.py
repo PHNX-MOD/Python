@@ -1,6 +1,11 @@
-import csv
-
 from main import User,Session,engine
+import csv
+import json 
+
+
+def import_data_from_csv("csvFilePath"):
+
+  with open()
 
 
 
