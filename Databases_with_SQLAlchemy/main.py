@@ -1,6 +1,6 @@
 from sqlalchemy import Column, String, DateTime, Integer, create_engine
 from datetime import datetime
-from sqlalchemy.orm import declarative_base
+from sqlalchemy.orm import declarative_base, sessionmaker
 import os
 
 BASE_DIR=os.path.dirname(os.path.realpath(__file__))
@@ -9,6 +9,8 @@ connection_string = 'sqlite:///'+os.path.join(BASE_DIR,'site.db')
 Base = declarative_base()
 
 engine = create_engine(connection_string, echo=True)
+
+Session = sessionmaker()
 
 class User(Base):
   __tablename__ = 'users'
