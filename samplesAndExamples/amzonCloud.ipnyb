@@ -1,3 +1,0 @@
-from datetime import datetime
-dtml = datetime(2013,5,17,16,21)
-print(dtml)
