@@ -1,0 +1,20 @@
+Help files with alias or concept or title matching ‘tidyverse’ using
+fuzzy matching:
+
+
+lifecycle::pkg_lifecycle_statuses
+                        Lint usages of functions that have a non-stable
+                        life cycle.
+  Aliases: lint_tidyverse_lifecycle
+rlang::rlang            rlang: Functions for Base Types and Core R and
+                        'Tidyverse' Features
+vctrs::vector_recycling_rules
+                        Recycling rules used by r-lib and the tidyverse
+
+
+Type '?PKG::FOO' to inspect entries 'PKG::FOO', or 'TYPE?PKG::FOO' for
+entries like 'PKG::FOO-TYPE'.
+
+
+
+
